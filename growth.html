@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>하지은 성장 과정 정리 (2003–2026)</title>
+<style>
+  :root{
+    --navy:#1f3a5f; --navy-2:#2e527f;
+    --gold:#c9963f; --gold-soft:#e6c987;
+    --teal:#3a8a86; --rose:#b8607a;
+    --cream:#faf7f1; --paper:#ffffff;
+    --ink:#25303b; --ink-soft:#5b6772; --line:#e8e2d6;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:"Apple SD Gothic Neo","Malgun Gothic","Noto Sans KR","Nanum Gothic",sans-serif;
+    background:linear-gradient(180deg,#f3ede2 0%,#faf7f1 26%,#faf7f1 100%);
+    color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:980px;margin:0 auto;padding:0 22px 70px;}
+
+  header{text-align:center;padding:60px 24px 36px;}
+  .kicker{display:inline-block;letter-spacing:.3em;font-size:12px;font-weight:700;color:var(--gold);
+    border:1px solid var(--gold-soft);border-radius:100px;padding:6px 18px;margin-bottom:22px;}
+  header h1{font-size:42px;font-weight:800;letter-spacing:-.01em;color:var(--navy);line-height:1.2;}
+  header .tagline{margin-top:18px;font-size:18px;color:var(--ink);font-weight:600;}
+  header .sub{margin-top:8px;font-size:14px;color:var(--ink-soft);}
+
+  .sec-title{display:flex;align-items:center;gap:14px;margin:54px 0 24px;}
+  .sec-title .num{flex:none;width:34px;height:34px;border-radius:50%;background:var(--navy);color:#fff;
+    font-size:15px;font-weight:700;display:flex;align-items:center;justify-content:center;}
+  .sec-title h2{font-size:22px;font-weight:800;color:var(--navy);letter-spacing:-.01em;}
+  .sec-title .en{font-size:11px;letter-spacing:.2em;color:var(--gold);font-weight:700;text-transform:uppercase;}
+
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:8px;}
+  .stat{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:20px 14px;text-align:center;
+    box-shadow:0 6px 20px rgba(31,58,95,.05);}
+  .stat .big{font-size:28px;font-weight:800;color:var(--navy);line-height:1.1;}
+  .stat .big small{font-size:15px;font-weight:700;}
+  .stat .lab{font-size:12.5px;color:var(--ink-soft);margin-top:6px;}
+
+  .stages{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;}
+  .stage{position:relative;background:var(--paper);border-radius:18px;padding:24px 22px 20px;border:1px solid var(--line);
+    box-shadow:0 8px 24px rgba(31,58,95,.06);overflow:hidden;}
+  .stage::before{content:"";position:absolute;top:0;left:0;right:0;height:5px;}
+  .stage.s1::before{background:var(--teal);}
+  .stage.s2::before{background:var(--gold);}
+  .stage.s3::before{background:var(--rose);}
+  .stage .era{font-size:12px;font-weight:700;letter-spacing:.05em;color:var(--ink-soft);}
+  .stage h3{font-size:17px;font-weight:800;color:var(--navy);margin:6px 0 12px;}
+  .stage ul{list-style:none;}
+  .stage li{font-size:13px;color:var(--ink);padding:5px 0 5px 15px;position:relative;border-bottom:1px dashed #efe9dd;}
+  .stage li:last-child{border-bottom:none;}
+  .stage li b{color:var(--navy);}
+  .stage li::before{content:"";position:absolute;left:0;top:12px;width:6px;height:6px;border-radius:50%;background:var(--gold-soft);}
+  .stage.s1 li::before{background:var(--teal);}
+  .stage.s3 li::before{background:var(--rose);}
+
+  /* career history */
+  .career-hist{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:14px 26px;
+    box-shadow:0 8px 24px rgba(31,58,95,.05);}
+  .chrow{display:grid;grid-template-columns:118px 1fr;gap:18px;padding:11px 0;border-bottom:1px dashed #efe9dd;align-items:baseline;}
+  .chrow:last-child{border-bottom:none;}
+  .chrow.now{background:linear-gradient(90deg,#fbf4e4,transparent);border-radius:8px;margin:0 -10px;padding:11px 10px;}
+  .chyr{font-size:13px;font-weight:800;color:var(--gold);letter-spacing:.01em;}
+  .chrow.now .chyr{color:#a4761f;}
+  .chrole{font-size:14.5px;color:var(--ink);}
+  .chrole b{color:var(--navy);font-weight:800;}
+  .chrole .co{color:var(--ink-soft);font-size:13px;}
+
+  /* revenue chart */
+  .chart-card{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:26px 26px 20px;
+    box-shadow:0 8px 24px rgba(31,58,95,.06);}
+  .chart-head{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:8px;margin-bottom:6px;}
+  .chart-head h3{font-size:17px;font-weight:800;color:var(--navy);}
+  .chart-head .unit{font-size:12px;color:var(--ink-soft);}
+  .bars{display:flex;align-items:flex-end;gap:10px;height:200px;padding-top:22px;border-bottom:2px solid #eadfca;margin-top:6px;}
+  .bar{flex:1;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;height:100%;position:relative;}
+  .bar .col{width:100%;max-width:46px;border-radius:7px 7px 0 0;background:linear-gradient(180deg,var(--navy-2),var(--navy));position:relative;}
+  .bar.peak .col{background:linear-gradient(180deg,var(--gold),#b07f28);}
+  .bar .val{position:absolute;top:-19px;font-size:11px;font-weight:700;color:var(--navy);white-space:nowrap;}
+  .bar.peak .val{color:#a4761f;}
+  .bar .yr{margin-top:8px;font-size:12px;font-weight:700;color:var(--ink-soft);}
+  .chart-note{margin-top:12px;font-size:11.5px;color:var(--ink-soft);line-height:1.5;}
+  .chart-legend{display:flex;gap:18px;flex-wrap:wrap;margin-top:10px;font-size:12px;color:var(--ink);}
+  .chart-legend span{display:flex;align-items:center;gap:6px;}
+  .dot{width:11px;height:11px;border-radius:3px;display:inline-block;}
+
+  /* timeline */
+  .timeline{position:relative;margin-top:8px;padding-left:8px;}
+  .timeline::before{content:"";position:absolute;left:82px;top:8px;bottom:8px;width:3px;
+    background:linear-gradient(180deg,var(--teal),var(--gold),var(--rose));border-radius:3px;}
+  .tl-row{position:relative;display:grid;grid-template-columns:76px 1fr;gap:28px;margin-bottom:18px;}
+  .tl-year{text-align:right;padding-top:12px;font-size:20px;font-weight:800;color:var(--navy);}
+  .tl-dot{position:absolute;left:74px;top:16px;width:18px;height:18px;border-radius:50%;background:#fff;border:4px solid var(--gold);z-index:2;}
+  .tl-row.hl .tl-dot{border-color:var(--rose);box-shadow:0 0 0 5px rgba(184,96,122,.15);}
+  .tl-card{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:15px 20px;box-shadow:0 5px 16px rgba(31,58,95,.05);}
+  .tl-row.hl .tl-card{border-color:var(--gold-soft);background:#fffdf8;}
+  .tl-card h4{font-size:15.5px;font-weight:800;color:var(--navy);margin-bottom:6px;display:flex;flex-wrap:wrap;gap:7px;align-items:center;}
+  .tl-card p{font-size:13.5px;color:var(--ink);}
+  .tl-card p + p{margin-top:4px;}
+  .tag{font-size:10.5px;font-weight:700;padding:2px 9px;border-radius:100px;background:#eef3f8;color:var(--navy-2);}
+  .tag.done{background:#e5f2ec;color:#2c7a5b;}
+  .tag.life{background:#fbe9ef;color:var(--rose);}
+  .tag.work{background:#fff2dd;color:#9a6b1c;}
+  .lead{color:var(--ink-soft);font-size:12px;}
+
+  .ach-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;}
+  .ach{display:flex;gap:12px;align-items:flex-start;background:var(--paper);border:1px solid var(--line);
+    border-radius:12px;padding:12px 15px;box-shadow:0 4px 12px rgba(31,58,95,.04);}
+  .ach .yr{flex:none;font-size:12px;font-weight:800;color:#fff;background:var(--teal);border-radius:7px;padding:3px 8px;min-width:58px;text-align:center;}
+  .ach .tx{font-size:13px;color:var(--ink);font-weight:600;line-height:1.45;}
+
+  .dream{background:linear-gradient(135deg,var(--navy),#16293f);border-radius:22px;padding:32px 30px;color:#eaf0f7;}
+  .dream h3{color:#fff;font-size:18px;font-weight:800;margin-bottom:20px;}
+  .flow{display:flex;flex-wrap:wrap;align-items:stretch;gap:9px;}
+  .flow .step{flex:1 1 130px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:14px;padding:13px 14px;}
+  .flow .step .yy{font-size:11.5px;font-weight:700;color:var(--gold-soft);letter-spacing:.06em;}
+  .flow .step .qq{font-size:13.5px;color:#fff;font-weight:600;margin-top:6px;line-height:1.5;}
+  .flow .arrow{display:flex;align-items:center;color:var(--gold-soft);font-size:19px;font-weight:700;}
+  @media(max-width:700px){.flow .arrow{display:none;}}
+
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+  .panel{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:24px;box-shadow:0 8px 24px rgba(31,58,95,.05);}
+  .panel h3{font-size:16px;font-weight:800;color:var(--navy);margin-bottom:14px;display:flex;align-items:center;gap:8px;}
+  .panel h3 .ic{width:26px;height:26px;border-radius:8px;background:var(--gold-soft);display:inline-flex;align-items:center;justify-content:center;font-size:14px;}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;}
+  .chip{font-size:13px;padding:6px 13px;border-radius:100px;background:#f4efe4;color:var(--ink);font-weight:600;}
+  .chip.v{background:#eef3f8;color:var(--navy-2);}
+  .vision-quote{font-size:16px;font-weight:700;color:var(--navy);line-height:1.6;}
+  .vision-quote small{display:block;font-size:12.5px;color:var(--ink-soft);font-weight:500;margin-top:10px;}
+
+  /* academic */
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+  .acard{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:20px 22px;box-shadow:0 6px 18px rgba(31,58,95,.05);}
+  .acard h3{font-size:15px;font-weight:800;color:var(--navy);margin-bottom:12px;display:flex;align-items:center;gap:8px;}
+  .acard h3 .ic{width:24px;height:24px;border-radius:7px;background:var(--gold-soft);display:inline-flex;align-items:center;justify-content:center;font-size:13px;}
+  .elist,.alist{list-style:none;}
+  .elist li{padding:8px 0;border-bottom:1px dashed #eee6d7;}
+  .elist li:last-child,.alist li:last-child{border-bottom:none;}
+  .elist .deg{font-size:13.5px;font-weight:800;color:var(--navy);}
+  .elist .sch{font-size:12px;color:var(--ink-soft);}
+  .elist .rep{display:inline-block;margin-top:4px;font-size:10.5px;font-weight:700;color:var(--rose);background:#fbe9ef;border-radius:100px;padding:2px 9px;}
+  .alist li{display:flex;gap:10px;align-items:flex-start;padding:8px 0;border-bottom:1px dashed #eee6d7;}
+  .alist .t{font-size:13px;font-weight:700;color:var(--navy);}
+  .alist .d{font-size:11.5px;color:var(--ink-soft);}
+  .media{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:4px;}
+  .mrow{display:flex;gap:11px;align-items:flex-start;background:#fbfaf7;border:1px solid var(--line);border-radius:11px;padding:11px 14px;}
+  .mrow .yr{flex:none;font-size:11px;font-weight:800;color:#fff;background:#7a6cb0;border-radius:7px;padding:3px 8px;min-width:58px;text-align:center;}
+  .mrow .mt{font-size:12.5px;color:var(--ink);}
+  .mrow .mt b{color:var(--navy);}
+  .mrow .mt .out{color:var(--ink-soft);font-size:11px;}
+  footer{text-align:center;margin-top:54px;padding-top:24px;border-top:1px solid var(--line);color:var(--ink-soft);font-size:12px;}
+  footer b{color:var(--navy);}
+
+  @media(max-width:760px){
+    header h1{font-size:31px;}
+    .stats{grid-template-columns:repeat(2,1fr);}
+    .stages{grid-template-columns:1fr;}
+    .grid2,.ach-grid,.two,.media{grid-template-columns:1fr;}
+    .timeline::before{left:56px;}
+    .tl-row{grid-template-columns:52px 1fr;gap:18px;}
+    .tl-dot{left:48px;}
+    .tl-year{font-size:16px;}
+    .bar .val{font-size:9px;}
+    .chrow{grid-template-columns:96px 1fr;gap:12px;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <span class="kicker">GROWTH JOURNEY · 2001 – 2026</span>
+    <h1>하지은의 성장 과정</h1>
+    <p class="tagline">한글 교사에서 시작해 비서·강사·창업가·작가를 거쳐 대학교수·학과장으로 —<br>가르침에서 출발해 가르침으로 돌아온 25년의 여정</p>
+    <p class="sub">2001년 첫 가르침(아이템플 한글 교사)부터 2026년 전임교수 임용까지 · 공식 경력·「2018 꿈리스트」·「비커넥티드」 데이터로 재구성</p>
+  </header>
+
+  <!-- STATS -->
+  <div class="stats">
+    <div class="stat"><div class="big">25년</div><div class="lab">직업 여정<br>(2001–2026)</div></div>
+    <div class="stat"><div class="big">14<small>개 달성</small></div><div class="lab">꿈리스트 86개 중<br>(진행중 23개)</div></div>
+    <div class="stat"><div class="big">5,278<small>만</small></div><div class="lab">비커넥티드<br>연 입금 정점(2021)</div></div>
+    <div class="stat"><div class="big">교수</div><div class="lab">제주관광대<br>조교수·학과장(2026)</div></div>
+  </div>
+
+  <!-- CAREER STAGES -->
+  <div class="sec-title">
+    <div class="num">1</div>
+    <div><div class="en">Career Arc</div><h2>세 번의 성장 — 직업의 궤적</h2></div>
+  </div>
+  <div class="stages">
+    <div class="stage s1">
+      <div class="era">STAGE 1 · 2001–2010</div>
+      <h3>가르침·실무의 시대</h3>
+      <ul>
+        <li>아이템플 한글 교사(2001)</li>
+        <li>한얼 법률사무소 비서(2003)</li>
+        <li>넥스트로 법률사무소(2004–07)</li>
+        <li>아남전자(2008)</li>
+        <li><b>머크</b> Administrator(2009)</li>
+        <li>삼성전자 CS아카데미 강사(2010)</li>
+      </ul>
+    </div>
+    <div class="stage s2">
+      <div class="era">STAGE 2 · 2010–2019</div>
+      <h3>비서 × 강사의 시대</h3>
+      <ul>
+        <li><b>영등포구청 첫 강의</b>(2010)</li>
+        <li>쿠팡 QAA·사내강사(2011)</li>
+        <li>SAP·<b>TMON</b> 비서 & 사내강사</li>
+        <li>컬러·오라·인성교육 자격·강사</li>
+        <li><b>겸임교수</b> 용인예술과학대(2019)</li>
+      </ul>
+    </div>
+    <div class="stage s3">
+      <div class="era">STAGE 3 · 2017–2026</div>
+      <h3>창업·저술·교수의 시대</h3>
+      <ul>
+        <li><b>비커넥티드</b> 창업·CEO(2017)</li>
+        <li>첫 책 「성과로 이어지는 일습관」 출간·베스트셀러(2020)</li>
+        <li>2번째 책 「하버드의 달력은 열흘 빠르다」 출간(2023)</li>
+        <li>「하버드의 달력은 열흘 빠르다」 대만 번역 출간(2024)</li>
+        <li>교육공학 박사학위(2026)</li>
+        <li><b>제주관광대 조교수·학과장</b>(2026)</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- CAREER HISTORY -->
+  <div class="sec-title">
+    <div class="num">2</div>
+    <div><div class="en">Career History</div><h2>전체 경력</h2></div>
+  </div>
+  <div class="career-hist">
+    <div class="chrow now"><div class="chyr">2026 ~ 현재</div><div class="chrole"><b>조교수 · 학과장</b> <span class="co">· 제주관광대학교 창업마케팅학과</span></div></div>
+    <div class="chrow"><div class="chyr">2025 ~ 2026</div><div class="chrole"><b>겸임교수</b> <span class="co">· 제주관광대학교</span></div></div>
+    <div class="chrow"><div class="chyr">2019 ~ 2026</div><div class="chrole"><b>겸임교수</b> <span class="co">· 용인예술과학대학교</span></div></div>
+    <div class="chrow"><div class="chyr">2017 ~ 2026</div><div class="chrole"><b>CEO</b> <span class="co">· Be Connected (비커넥티드)</span></div></div>
+    <div class="chrow"><div class="chyr">2012 ~ 2018</div><div class="chrole"><b>의장 비서(Master) · 사내강사</b> <span class="co">· TMON</span></div></div>
+    <div class="chrow"><div class="chyr">2011 ~ 2012</div><div class="chrole"><b>Receptionist · 사내강사</b> <span class="co">· SAP Korea</span></div></div>
+    <div class="chrow"><div class="chyr">2011</div><div class="chrole"><b>서비스본부 QAA · 사내강사</b> <span class="co">· Coupang</span></div></div>
+    <div class="chrow"><div class="chyr">2010 ~ 2011</div><div class="chrole"><b>강사</b> <span class="co">· 삼성전자 CS 아카데미</span></div></div>
+    <div class="chrow"><div class="chyr">2009 ~ 2010</div><div class="chrole"><b>Administrator</b> <span class="co">· Merck Korea</span></div></div>
+    <div class="chrow"><div class="chyr">2008 ~ 2009</div><div class="chrole"><b>Assistant Manager</b> <span class="co">· 아남전자</span></div></div>
+    <div class="chrow"><div class="chyr">2004 ~ 2007</div><div class="chrole"><b>Assistant Manager</b> <span class="co">· Nextlaw Law Office</span></div></div>
+    <div class="chrow"><div class="chyr">2003 ~ 2004</div><div class="chrole"><b>Secretary</b> <span class="co">· Hanol Law Office</span></div></div>
+    <div class="chrow"><div class="chyr">2001 ~ 2002</div><div class="chrole"><b>한글 배움이 교사</b> <span class="co">· 아이템플</span></div></div>
+  </div>
+
+  <!-- ACADEMIC RECORD -->
+  <div class="sec-title">
+    <div class="num">3</div>
+    <div><div class="en">Academic Record</div><h2>학술·연구 이력 (대학원 시기)</h2></div>
+  </div>
+
+  <div class="stats" style="margin-bottom:16px;">
+    <div class="stat"><div class="big">9<small>편</small></div><div class="lab">학술·학위 논문<br>(2022–2026)</div></div>
+    <div class="stat"><div class="big">10<small>회</small></div><div class="lab">국내외<br>학회 발표</div></div>
+    <div class="stat"><div class="big">4<small>개국</small></div><div class="lab">국제학회 발표<br>미국·핀란드·대만·일본</div></div>
+    <div class="stat"><div class="big">교육공학</div><div class="lab">박사 (Ph.D.)<br>이화여대 · 2026</div></div>
+  </div>
+
+  <div class="two">
+    <div class="acard">
+      <h3><span class="ic">🎓</span> 학력 &amp; 학생 대표</h3>
+      <ul class="elist">
+        <li><div class="deg">교육공학 박사 (Ph.D.), 2026</div><div class="sch">이화여자대학교 일반대학원 교육공학과</div><div class="rep">박사과정 학과 학생대표</div></li>
+        <li><div class="deg">교육공학 석사, 2023</div><div class="sch">이화여자대학교 교육대학원</div><div class="rep">교육대학원 학과 학생대표</div></li>
+      </ul>
+    </div>
+    <div class="acard">
+      <h3><span class="ic">🏆</span> 수상</h3>
+      <ul class="alist">
+        <li><span style="font-size:16px">🥇</span><div><div class="t">대학원 융복합연구 장학생</div><div class="d">이화여자대학교 (2025)</div></div></li>
+        <li><span style="font-size:16px">🌏</span><div><div class="t">Young Scholar Award</div><div class="d">ICoME 2024, Tokyo, Japan</div></div></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="acard" style="margin-top:16px;">
+    <h3><span class="ic">🔍</span> 연구 주제</h3>
+    <div class="chips">
+      <span class="chip v">생성형 AI · ChatGPT 교육 활용</span>
+      <span class="chip v">프롬프트 엔지니어링</span>
+      <span class="chip v">메타버스 교육 활용</span>
+      <span class="chip v">AI 시대 경력개발 · HRD</span>
+      <span class="chip v">정의적 스캐폴딩</span>
+      <span class="chip v">중년여성·전문대생·구직단념청년 연구</span>
+    </div>
+    <p style="font-size:12px;color:var(--ink-soft);margin-top:12px;line-height:1.6;">국제학술지 2편(Educational Technology International) 포함 학술지 논문 8편 + 석사학위논문 1편, 국내외 학술대회 발표 10회(국제 5회). <b style="color:var(--navy)">전체 논문·발표 목록은 별도 「학술·연구 이력」 자료에 정리했습니다.</b></p>
+  </div>
+
+  <div class="acard" style="margin-top:16px;">
+    <h3><span class="ic">📺</span> 언론 보도</h3>
+    <div class="media">
+      <div class="mrow"><span class="yr">2021.08</span><div class="mt"><b>'나의 색을 찾아서'</b> <span class="out">· KBS 제주 콘텐츠안테나</span></div></div>
+      <div class="mrow"><span class="yr">2021.01</span><div class="mt"><b>인성전문가 "부모, 자녀 인격체로 존중해야"</b> <span class="out">· 천지일보(NewsCJ)</span></div></div>
+      <div class="mrow"><span class="yr">2021.01</span><div class="mt"><b>[생생이슈] 집에서 즐기는 신년회</b> <span class="out">· KBS2TV 생생정보</span></div></div>
+      <div class="mrow"><span class="yr">2020.12</span><div class="mt"><b>Year-end parties go online</b> <span class="out">· The Korea Herald</span></div></div>
+      <div class="mrow"><span class="yr">2020.12</span><div class="mt"><b>[영상K] 언택트에서 온택트로</b> <span class="out">· KBS News 제주</span></div></div>
+      <div class="mrow"><span class="yr">2019.12</span><div class="mt"><b>원하는 삶, 성공적인 솔루션으로 커넥트</b> <span class="out">· Issue Maker 'The People'</span></div></div>
+    </div>
+  </div>
+
+  <!-- REVENUE CHART -->
+  <div class="sec-title">
+    <div class="num">4</div>
+    <div><div class="en">Be Connected</div><h2>내가 세운 회사, 비커넥티드의 성장</h2></div>
+  </div>
+  <div class="chart-card">
+    <div class="chart-head">
+      <h3>연도별 입금액 추이 (2017–2025)</h3>
+      <div class="unit">단위: 만원 · 강의·컨설팅·출판 등 사업 입금</div>
+    </div>
+    <div class="bars">
+      <div class="bar"><span class="val">171</span><div class="col" style="height:5px"></div><span class="yr">'17</span></div>
+      <div class="bar"><span class="val">1,474</span><div class="col" style="height:42px"></div><span class="yr">'18</span></div>
+      <div class="bar"><span class="val">2,420</span><div class="col" style="height:69px"></div><span class="yr">'19</span></div>
+      <div class="bar"><span class="val">3,214</span><div class="col" style="height:91px"></div><span class="yr">'20</span></div>
+      <div class="bar peak"><span class="val">5,278</span><div class="col" style="height:150px"></div><span class="yr">'21</span></div>
+      <div class="bar"><span class="val">3,002</span><div class="col" style="height:85px"></div><span class="yr">'22</span></div>
+      <div class="bar"><span class="val">3,043</span><div class="col" style="height:86px"></div><span class="yr">'23</span></div>
+      <div class="bar"><span class="val">3,324</span><div class="col" style="height:94px"></div><span class="yr">'24</span></div>
+      <div class="bar"><span class="val">2,822</span><div class="col" style="height:80px"></div><span class="yr">'25</span></div>
+    </div>
+    <div class="chart-legend">
+      <span><i class="dot" style="background:var(--navy)"></i> 연 입금액</span>
+      <span><i class="dot" style="background:var(--gold)"></i> 정점(2021)</span>
+    </div>
+    <p class="chart-note">
+      2017년 10월 설립 후 3년 만에 입금 규모가 <b>약 18배</b>로 성장, 2021년 정점(약 5,278만원)을 찍음.
+      참고로 순이익은 2019년 약 867만원 → 2020년 약 1,669만원으로 <b>2배 가까이</b> 증가.
+      2026년 3월 전임교수 임용과 함께 폐업 신고(업체명은 배우자 명의로 유지).
+      <br>※ 연 입금액은 통장 유입 합계 기준(이자·이월 포함), 연도별 기록 방식 차이로 실제 매출과 다를 수 있음.
+    </p>
+  </div>
+
+  <!-- TIMELINE -->
+  <div class="sec-title">
+    <div class="num">5</div>
+    <div><div class="en">Timeline</div><h2>연도별 발자취</h2></div>
+  </div>
+  <div class="timeline">
+
+    <div class="tl-row">
+      <div class="tl-year">2001<br><span style="font-size:11px;color:var(--ink-soft)">~2009</span></div>
+      <div class="tl-dot"></div>
+      <div class="tl-card">
+        <h4>가르침으로 연 첫 발 <span class="tag work">직장</span></h4>
+        <p><b>아이템플에서 한글 배움이 교사</b>로 첫 사회생활을 시작(2001). 이후 한얼 법률사무소 비서(2003)·넥스트로(2004–07)·아남전자(2008)를 거쳐 외국계 <b>머크(Merck)</b>에서 Administrator로 근무(2009).</p>
+      </div>
+    </div>
+
+    <div class="tl-row hl">
+      <div class="tl-year">2010<br><span style="font-size:11px;color:var(--ink-soft)">~2012</span></div>
+      <div class="tl-dot"></div>
+      <div class="tl-card">
+        <h4>강사의 길로 <span class="tag work">첫 강의</span></h4>
+        <p><b>삼성전자 CS 아카데미 강사</b>로 활동을 시작하고, <b>영등포구청 첫 강의</b> 후기를 남기며 강사의 길로(2010). 이후 쿠팡 QAA·사내강사(2011), SAP(2011)·<b>TMON</b>(2012~)에서 비서와 사내강사를 병행.</p>
+      </div>
+    </div>
+
+    <div class="tl-row hl">
+      <div class="tl-year">2014</div>
+      <div class="tl-dot"></div>
+      <div class="tl-card">
+        <h4>자기 탐색의 원년 <span class="tag">전환점</span></h4>
+        <p>에고그램·가치관·Wish List·"WHO AM I"를 정리하며 자신을 깊이 들여다봄. "후배를 돕는 강사"와 도서 발간의 꿈을 처음 그림.</p>
+      </div>
+    </div>
+
+    <div class="tl-row hl">
+      <div class="tl-year">2016</div>
+      <div class="tl-dot"></div>
+      <div class="tl-card">
+        <h4>사업의 씨앗 <span class="tag">비전</span> <span class="tag life">인연</span></h4>
+        <p><b>IBG(→비커넥티드)</b> 사업을 구상하고 2016~2060 장기 로드맵을 그림. 11월 팔라우 여행에서 미래의 배우자와 함께 비전을 작성.</p>
+      </div>
+    </div>
+
+    <div class="tl-row hl">
+      <div class="tl-year">2017</div>
+      <div class="tl-dot"></div>
+      <div class="tl-card">
+        <h4>결혼과 창업 <span class="tag life">결혼</span> <span class="tag done">✓ 창업</span></h4>
+        <p><span class="lead">8월 —</span> 자신을 존중해주는 배우자(은상)와 결혼. 강동구 둔촌동 정착.</p>
+        <p><span class="lead">10월 —</span> <b>비커넥티드 설립·CEO</b>. 12월 길벗출판사와 첫 책 출간 계약(계약금 1,000만원).</p>
+      </div>
+    </div>
+
+    <div class="tl-row hl">
+      <div class="tl-year">2018</div>
+      <div class="tl-dot"></div>
+      <div class="tl-card">
+        <h4>독립, 대표가 되다 <span class="tag done">✓ TMON 퇴사</span></h4>
+        <p><span class="lead">3월 —</span> 용인예술과학대(구 송담대) 비서경영과 <b>시간강사</b> 시작.</p>
+        <p><span class="lead">6월 —</span> TMON 퇴사(2012~2018), 비커넥티드 <b>대표</b>로 전념. 첫 온전한 사업 해 입금 약 1,474만원.</p>
+      </div>
+    </div>
+
+    <div class="tl-row hl">
+      <div class="tl-year">2019</div>
+      <div class="tl-dot"></div>
+      <div class="tl-card">
+        <h4>제주 정착·흑자 전환 <span class="tag">겸임교수</span></h4>
+        <p><b>용인예술과학대학교 겸임교수</b> 임용(2019~2026). 제주에 정착하며 "생각이 현실이 되는 삶"을 철학으로 세움.</p>
+        <p>비커넥티드 입금 약 2,420만원, 순이익 약 867만원으로 흑자 안착.</p>
+      </div>
+    </div>
+
+    <div class="tl-row hl">
+      <div class="tl-year">2020</div>
+      <div class="tl-dot"></div>
+      <div class="tl-card">
+        <h4>작가가 되다 <span class="tag done">✓ 베스트셀러</span></h4>
+        <p><span class="lead">9월 —</span> 첫 책 <b>「성과로 이어지는 일습관」</b>을 출간(9/23)하고 이튿날 <b>네이버 책 베스트셀러</b> 등극 — 실제 성취.</p>
+        <p>사업 입금 약 3,214만원, 순이익 약 1,669만원으로 전년 대비 2배 성장.</p>
+      </div>
+    </div>
+
+    <div class="tl-row hl">
+      <div class="tl-year">2021</div>
+      <div class="tl-dot"></div>
+      <div class="tl-card">
+        <h4>사업 정점 <span class="tag done">✓ 최고 매출</span></h4>
+        <p>비커넥티드 연 입금이 <b>약 5,278만원</b>으로 정점. 강의·컨설팅·출판이 함께 성장한 한 해. Grow 책방 구상도 시작.</p>
+      </div>
+    </div>
+
+    <div class="tl-row">
+      <div class="tl-year">2022<br><span style="font-size:11px;color:var(--ink-soft)">~2023</span></div>
+      <div class="tl-dot"></div>
+      <div class="tl-card">
+        <h4>연구자의 길로 <span class="tag">대학원</span> <span class="tag done">✓ 2번째 책</span></h4>
+        <p>"나만의 출강 선정 기준"을 정립(2022). 이화여대 교육대학원에서 <b>교육공학 석사</b>를 취득(2023)하고 곧바로 일반대학원 <b>박사과정</b>에 진학 — 두 과정 모두 <b>학과 학생대표</b>로 활동하며 연구자의 길로 들어섬.</p>
+        <p><span class="lead">2023년 8월 —</span> 두 번째 책 <b>「하버드의 달력은 열흘 빠르다」</b> 출간.</p>
+      </div>
+    </div>
+
+    <div class="tl-row hl">
+      <div class="tl-year">2024</div>
+      <div class="tl-dot"></div>
+      <div class="tl-card">
+        <h4>세계로 나간 책 <span class="tag done">✓ 해외 출간</span></h4>
+        <p><span class="lead">10월 —</span> 2023년 8월 출간한 <b>두 번째 책 「하버드의 달력은 열흘 빠르다」</b>가 대만에서 번역 출간. 박사과정 3학기(43세).</p>
+      </div>
+    </div>
+
+    <div class="tl-row hl">
+      <div class="tl-year">2026</div>
+      <div class="tl-dot"></div>
+      <div class="tl-card">
+        <h4>꿈의 완주 <span class="tag done">✓ 박사학위</span> <span class="tag done">✓ 교수 임용</span></h4>
+        <p><span class="lead">3월 —</span> 제주관광대 겸임교수(2025)를 거쳐 <b>창업마케팅학과 조교수 겸 학과장</b>으로 임용. 한때 "성향에 안 맞아 접었다"던 대학 전임교수의 꿈을 완주.</p>
+        <p><span class="lead">8월 —</span> <b>교육공학 박사학위</b> 취득. 전임교수 전념을 위해 비커넥티드는 폐업 신고(업체명 유지).</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ACHIEVEMENTS -->
+  <div class="sec-title">
+    <div class="num">6</div>
+    <div><div class="en">Dreams Achieved</div><h2>꿈리스트에서 이뤄낸 것들</h2></div>
+  </div>
+  <div class="ach-grid">
+    <div class="ach"><span class="yr">2017.08</span><span class="tx">존중해주는 사람과의 결혼</span></div>
+    <div class="ach"><span class="yr">2017.12</span><span class="tx">컬러 전문 자격증 취득</span></div>
+    <div class="ach"><span class="yr">2017</span><span class="tx">SMAT 자격증 취득</span></div>
+    <div class="ach"><span class="yr">2018.06</span><span class="tx">회사에서 독립해 리더(대표)가 됨</span></div>
+    <div class="ach"><span class="yr">2009~18</span><span class="tx">외국계·대기업 근무 완주</span></div>
+    <div class="ach"><span class="yr">2020.09</span><span class="tx">첫 책 「성과로 이어지는 일습관」 출간·베스트셀러</span></div>
+    <div class="ach"><span class="yr">2023.08</span><span class="tx">2번째 책 「하버드의 달력은 열흘 빠르다」 출간</span></div>
+    <div class="ach"><span class="yr">2024.10</span><span class="tx">「하버드의 달력은 열흘 빠르다」 대만 번역 출간</span></div>
+    <div class="ach"><span class="yr">2026.03</span><span class="tx">대학교 전임교수(조교수·학과장)</span></div>
+    <div class="ach"><span class="yr">2012~</span><span class="tx">스노보드 배우기 (혼자 탈 정도)</span></div>
+    <div class="ach"><span class="yr">2022.02</span><span class="tx">부산·남해 가족여행</span></div>
+  </div>
+
+  <!-- DREAM EVOLUTION -->
+  <div class="sec-title">
+    <div class="num">7</div>
+    <div><div class="en">Evolution of a Dream</div><h2>꿈은 이렇게 자라났다</h2></div>
+  </div>
+  <div class="dream">
+    <h3>"강사가 되고 싶다"에서 "박사·교수·학과장"까지</h3>
+    <div class="flow">
+      <div class="step"><div class="yy">2014</div><div class="qq">후배를 돕는 강사가 되고 싶다</div></div>
+      <div class="arrow">→</div>
+      <div class="step"><div class="yy">2017</div><div class="qq">비커넥티드 창업 · 세상을 연결하는 기업</div></div>
+      <div class="arrow">→</div>
+      <div class="step"><div class="yy">2020</div><div class="qq">첫 책 베스트셀러로 작가 실현</div></div>
+      <div class="arrow">→</div>
+      <div class="step"><div class="yy">2024</div><div class="qq">해외 번역 출간으로 세계 무대</div></div>
+      <div class="arrow">→</div>
+      <div class="step"><div class="yy">2026</div><div class="qq">박사학위·조교수·학과장으로 완주</div></div>
+    </div>
+  </div>
+
+  <!-- IDENTITY -->
+  <div class="sec-title">
+    <div class="num">8</div>
+    <div><div class="en">Who I Am</div><h2>나를 이루는 것들</h2></div>
+  </div>
+  <div class="grid2">
+    <div class="panel">
+      <h3><span class="ic">★</span> 강점</h3>
+      <div class="chips">
+        <span class="chip">열의</span><span class="chip">부지런함</span><span class="chip">인재 양성 감각</span>
+        <span class="chip">뛰어난 발표력</span><span class="chip">솔직담백함</span><span class="chip">자기 투자</span><span class="chip">리더십</span>
+      </div>
+      <h3 style="margin-top:20px;"><span class="ic">♡</span> 지향하는 삶</h3>
+      <div class="chips">
+        <span class="chip v">배우고 성장하는 삶</span><span class="chip v">건강</span><span class="chip v">여행</span>
+        <span class="chip v">소통·나눔</span><span class="chip v">화목한 가족</span>
+      </div>
+    </div>
+    <div class="panel">
+      <h3><span class="ic">◎</span> 삶의 비전</h3>
+      <p class="vision-quote">"사람들이 몸과 마음, 생각과 현실이 모두 연결되어 있음을 알고,<br>스스로 원하는 삶을 주도적으로 살 수 있도록 돕는다."
+        <small>— 비서에서 출발해 강사·작가·창업가·교수로,<br>선한 영향력을 전하며 끊임없이 배우고 성장해 온 삶</small>
+      </p>
+    </div>
+  </div>
+
+  <footer>
+    본 정리는 <b>공식 경력 이력</b>(2003–2026)·<b>「하지은 라이프 플랜」</b>·<b>「2018 꿈리스트」</b>·<b>「비커넥티드」</b> 데이터와 학술·연구·언론 보도 내역을 종합해 재구성한 것입니다.<br>
+    한글 교사에서 시작해 비서·강사·창업가·작가를 거쳐 대학교수·학과장으로 — 가르침에서 출발해 가르침으로 돌아온 25년의 여정입니다.
+  </footer>
+
+</div>
+</body>
+</html>

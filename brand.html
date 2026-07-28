@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>하지은 · 퍼스널 브랜드 프로필</title>
+<style>
+  :root{
+    --navy:#1f3a5f; --navy-2:#2e527f;
+    --gold:#c9963f; --gold-soft:#e6c987; --gold-bg:#f7efdd;
+    --teal:#3a8a86; --rose:#b8607a;
+    --paper:#ffffff; --ink:#25303b; --ink-soft:#5b6772; --line:#e8e2d6;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{
+    font-family:"Apple SD Gothic Neo","Malgun Gothic","Noto Sans KR","Nanum Gothic",sans-serif;
+    background:#ece5d8; color:var(--ink); line-height:1.6; -webkit-font-smoothing:antialiased;
+    padding:34px 16px;
+  }
+  .page{
+    max-width:860px;margin:0 auto;background:var(--paper);
+    border-radius:22px;overflow:hidden;
+    box-shadow:0 20px 60px rgba(31,58,95,.18);
+  }
+
+  /* HERO */
+  .hero{
+    background:linear-gradient(135deg,#1f3a5f 0%,#16293f 100%);
+    color:#fff;padding:44px 48px 38px;position:relative;
+  }
+  .hero::after{content:"";position:absolute;right:-40px;top:-40px;width:220px;height:220px;
+    background:radial-gradient(circle,rgba(201,150,63,.28),transparent 68%);}
+  .hero .eyebrow{letter-spacing:.34em;font-size:11px;font-weight:700;color:var(--gold-soft);}
+  .hero h1{font-size:40px;font-weight:800;letter-spacing:-.01em;margin:10px 0 4px;}
+  .hero h1 .en{font-size:19px;font-weight:500;color:#b9c6d6;margin-left:8px;}
+  .hero .roles{font-size:15.5px;color:#e7edf4;font-weight:600;margin-top:8px;}
+  .hero .roles b{color:var(--gold-soft);}
+  .hero .promise{
+    margin-top:20px;font-size:17px;font-weight:700;line-height:1.5;
+    border-left:3px solid var(--gold);padding-left:16px;color:#fff;max-width:640px;
+  }
+
+  .body{padding:38px 48px 30px;}
+  .sect{margin-bottom:30px;}
+  .sect-h{display:flex;align-items:center;gap:11px;margin-bottom:16px;}
+  .sect-h .bar{width:5px;height:19px;background:var(--gold);border-radius:3px;}
+  .sect-h h2{font-size:18px;font-weight:800;color:var(--navy);}
+  .sect-h .en{font-size:10.5px;letter-spacing:.18em;color:var(--gold);font-weight:700;text-transform:uppercase;margin-left:4px;}
+
+  /* STRENGTHS */
+  .str{display:grid;grid-template-columns:1fr 1fr;gap:13px;}
+  .str .item{border:1px solid var(--line);border-radius:14px;padding:16px 18px;background:#fdfbf6;position:relative;}
+  .str .item.full{grid-column:1 / -1;}
+  .str .top{display:flex;align-items:center;gap:10px;margin-bottom:6px;}
+  .str .ic{width:34px;height:34px;flex:none;border-radius:9px;display:flex;align-items:center;justify-content:center;
+    font-size:17px;color:#fff;font-weight:800;}
+  .str .i1{background:var(--teal);} .str .i2{background:var(--gold);}
+  .str .i3{background:var(--rose);} .str .i4{background:var(--navy-2);}
+  .str .i5{background:#7a6cb0;}
+  .str .name{font-size:15.5px;font-weight:800;color:var(--navy);}
+  .str .name span{display:block;font-size:11px;font-weight:600;color:var(--gold);letter-spacing:.04em;}
+  .str .desc{font-size:13px;color:var(--ink);}
+  .str .ev{font-size:11.5px;color:var(--ink-soft);margin-top:6px;padding-top:6px;border-top:1px dashed #e7ddc9;}
+  .str .ev b{color:var(--teal);}
+
+  /* PROOF */
+  .proof{display:grid;grid-template-columns:repeat(4,1fr);gap:11px;}
+  .proof .p{background:var(--navy);color:#fff;border-radius:13px;padding:15px 12px;text-align:center;}
+  .proof .p .n{font-size:20px;font-weight:800;line-height:1.1;color:var(--gold-soft);}
+  .proof .p .l{font-size:11.5px;color:#d9e2ec;margin-top:5px;}
+
+  /* CAREER LINE */
+  .career{display:flex;flex-wrap:wrap;align-items:center;gap:7px;font-size:13px;font-weight:700;}
+  .career .node{background:var(--gold-bg);color:var(--navy);padding:6px 14px;border-radius:100px;border:1px solid var(--gold-soft);}
+  .career .node.now{background:var(--navy);color:#fff;border-color:var(--navy);}
+  .career .sep{color:var(--gold);font-weight:800;}
+
+  /* TOPICS */
+  .topics{display:flex;flex-wrap:wrap;gap:8px;}
+  .topics .t{font-size:13px;font-weight:600;padding:7px 14px;border-radius:10px;background:#eef3f8;color:var(--navy-2);}
+
+  /* BIO */
+  .bio{background:#faf7f1;border:1px solid var(--line);border-radius:16px;padding:22px 24px;font-size:14px;color:var(--ink);line-height:1.75;}
+  .bio p+p{margin-top:10px;}
+  .bio b{color:var(--navy);}
+
+  /* CREDENTIALS */
+  .cred{columns:2;column-gap:32px;font-size:13px;color:var(--ink);}
+  .cred li{margin-bottom:7px;list-style:none;padding-left:16px;position:relative;break-inside:avoid;}
+  .cred li::before{content:"›";position:absolute;left:0;color:var(--gold);font-weight:800;}
+  .cred li b{color:var(--navy);}
+
+  .foot{background:#f3ede2;padding:20px 48px;text-align:center;font-size:12px;color:var(--ink-soft);}
+  .foot .quote{font-size:15px;font-weight:800;color:var(--navy);margin-bottom:6px;}
+
+  @media(max-width:720px){
+    .hero,.body,.foot{padding-left:26px;padding-right:26px;}
+    .hero h1{font-size:31px;}
+    .str,.proof{grid-template-columns:1fr;}
+    .proof{grid-template-columns:1fr 1fr;}
+    .cred{columns:1;}
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="eyebrow">PERSONAL BRAND PROFILE</div>
+    <h1>하지은 <span class="en">Ha Jieun</span></h1>
+    <div class="roles"><b>대학교수</b> · <b>베스트셀러 작가</b> · <b>라이프 &amp; 커리어 멘토</b> · <b>창업가</b></div>
+    <div class="promise">"비서에서 대학교수까지 — 스스로 설계한 삶을 살아낸 사람이,<br>당신의 삶과 커리어도 설계하도록 돕습니다."</div>
+  </div>
+
+  <div class="body">
+
+    <!-- PROOF POINTS -->
+    <div class="sect">
+      <div class="sect-h"><span class="bar"></span><h2>한눈에 보는 성취</h2><span class="en">Proof</span></div>
+      <div class="proof">
+        <div class="p"><div class="n">교수·학과장</div><div class="l">제주관광대<br>창업마케팅학과 (2026)</div></div>
+        <div class="p"><div class="n">박사</div><div class="l">교육공학<br>Ph.D. (2026)</div></div>
+        <div class="p"><div class="n">2개국 출간</div><div class="l">베스트셀러 저자<br>한국·대만</div></div>
+        <div class="p"><div class="n">창업 대표</div><div class="l">비커넥티드<br>2017–2026</div></div>
+      </div>
+    </div>
+
+    <!-- CAREER -->
+    <div class="sect">
+      <div class="sect-h"><span class="bar"></span><h2>25년의 성장 궤적</h2><span class="en">Journey</span></div>
+      <div class="career">
+        <span class="node">비서</span><span class="sep">→</span>
+        <span class="node">강사</span><span class="sep">→</span>
+        <span class="node">창업가</span><span class="sep">→</span>
+        <span class="node">작가</span><span class="sep">→</span>
+        <span class="node now">대학교수 · 학과장</span>
+      </div>
+    </div>
+
+    <!-- STRENGTHS DIAGNOSIS -->
+    <div class="sect">
+      <div class="sect-h"><span class="bar"></span><h2>강점 진단</h2><span class="en">Signature Strengths</span></div>
+      <div class="str">
+
+        <div class="item">
+          <div class="top"><div class="ic i1">設</div><div class="name">설계력<span>The Architect</span></div></div>
+          <div class="desc">삶을 우연에 맡기지 않고 촘촘히 기획·기록하는 힘. 목표를 눈에 보이게 만들어 현실로 끌어온다.</div>
+          <div class="ev"><b>근거</b> · 15년간 비전보드·연간계획·꿈리스트를 기록하고, 사업 입출금까지 데이터로 관리</div>
+        </div>
+
+        <div class="item">
+          <div class="top"><div class="ic i2">完</div><div class="name">완주력<span>Follow-Through</span></div></div>
+          <div class="desc">적어둔 꿈을 몇 년이 걸려도 끝내 실현하는 끈기. 한번 접은 목표도 다시 집어 완성한다.</div>
+          <div class="ev"><b>근거</b> · "접었다"던 대학 전임교수의 꿈을 완주, 2017년 다짐한 출간을 2020년 베스트셀러로 실현</div>
+        </div>
+
+        <div class="item">
+          <div class="top"><div class="ic i3">轉</div><div class="name">전환·확장력<span>Reinvention</span></div></div>
+          <div class="desc">안전지대를 넘어 새 무대로 도약하는 용기. 직업도, 사는 곳도, 배움도 계속 확장한다.</div>
+          <div class="ev"><b>근거</b> · 안정적인 대기업 비서직을 내려놓고 창업·독립, 서울→제주 이주, 박사과정 진학</div>
+        </div>
+
+        <div class="item">
+          <div class="top"><div class="ic i4">連</div><div class="name">연결·영향력<span>Connection</span></div></div>
+          <div class="desc">성공 자체보다 '사람을 돕고 잇는 것'을 목적에 둔다. 선한 영향력이 일관된 나침반.</div>
+          <div class="ev"><b>근거</b> · 회사명 'Be Connected', 모든 기록을 관통하는 "원하는 삶을 살도록 돕는다"는 사명</div>
+        </div>
+
+        <div class="item full">
+          <div class="top"><div class="ic i5">衡</div><div class="name">균형감 있는 몽상가<span>The Grounded Visionary</span></div></div>
+          <div class="desc">"이미 이루어졌다"며 자신을 끌어올리는 낙관과, 순이익을 따지는 현실 감각이 공존한다. 큰 꿈을 그리되 사실과 다짐을 구분하는 자기객관화까지 갖췄다.</div>
+          <div class="ev"><b>근거</b> · 매출을 엑셀로 관리하면서도 담대한 비전을 선언, 스스로 "이건 선언일 뿐"이라 바로잡는 정직함, 장점과 단점을 나란히 기록하는 자기이해</div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- BIO -->
+    <div class="sect">
+      <div class="sect-h"><span class="bar"></span><h2>프로필 소개</h2><span class="en">Bio</span></div>
+      <div class="bio">
+        <p>하지은은 <b>비서에서 대학교수까지</b>, 스스로 설계한 삶을 하나씩 현실로 만들어 온 라이프·커리어 멘토다. 한글 교사로 사회생활을 시작해(2001), 법률사무소 비서·아남전자·머크·SAP를 거쳐 TMON에서 <b>의장 비서</b>로 일하며 실무 전문성을 쌓았고, 여러 기업에서 사내강사를 겸했다. 2010년 삼성전자 CS 아카데미 강사와 영등포구청 첫 강의를 시작으로 강단에 서며, 그 경험을 후배들에게 나누기 시작했다. 가르침으로 연 커리어는 25년을 돌아 대학교수로 이어졌다.</p>
+        <p>2017년 <b>커뮤니케이션·라이프 컨설팅 기업 '비커넥티드(Be Connected)'</b>를 창업해 대표로 이끌었고, 2020년 첫 책 <b>「성과로 이어지는 일습관」</b>을 출간해 <b>네이버 책 베스트셀러</b>에 올랐다. 이어 2023년 두 번째 책 <b>「하버드의 달력은 열흘 빠르다」</b>를 펴냈고, 이 책은 2024년 대만에서 번역 출간되며 해외 독자를 만났다.</p>
+        <p>현재는 <b>제주관광대학교 창업마케팅학과 조교수 겸 학과장</b>이자 <b>교육공학 박사</b>로서, 강의·저술·컨설팅을 통해 "생각이 현실이 되는 삶"을 전한다. 그는 사람들이 몸과 마음, 생각과 현실이 연결되어 있음을 깨닫고, 스스로 원하는 삶을 주도적으로 살아가도록 돕는 것을 자신의 사명으로 삼는다.</p>
+      </div>
+    </div>
+
+    <!-- TOPICS -->
+    <div class="sect">
+      <div class="sect-h"><span class="bar"></span><h2>강연 &amp; 컨설팅 주제</h2><span class="en">Topics</span></div>
+      <div class="topics">
+        <span class="t">비서·오피스 실무 &amp; 자기관리</span>
+        <span class="t">커뮤니케이션 &amp; 대인관계</span>
+        <span class="t">커리어 설계 · 취업 컨설팅</span>
+        <span class="t">라이프 디자인 · 목표 실현</span>
+        <span class="t">인성교육</span>
+        <span class="t">창업 · 마케팅</span>
+        <span class="t">퍼스널 컬러 &amp; 마인드 코칭</span>
+      </div>
+    </div>
+
+    <!-- CREDENTIALS -->
+    <div class="sect" style="margin-bottom:8px;">
+      <div class="sect-h"><span class="bar"></span><h2>주요 이력 &amp; 자격</h2><span class="en">Credentials</span></div>
+      <ul class="cred">
+        <li><b>제주관광대학교</b> 창업마케팅학과 조교수·학과장 (2026~)</li>
+        <li><b>교육공학 박사</b> (Ph.D., 2026)</li>
+        <li><b>겸임교수</b> · 제주관광대(2025~) · 용인예술과학대(2019~2026)</li>
+        <li><b>Be Connected(비커넥티드)</b> 창업·CEO (2017–2026)</li>
+        <li>前 <b>TMON</b> 의장 비서 · 사내강사 (2012–2018)</li>
+        <li>前 SAP Korea · 쿠팡(QAA) · 삼성전자 CS아카데미 강사</li>
+        <li>前 머크 · 아남전자 · 법률사무소(한얼·넥스트로) · 아이템플(한글교사)</li>
+        <li>베스트셀러 저자 · <b>저서 2권</b> — 「성과로 이어지는 일습관」(2020) · 「하버드의 달력은 열흘 빠르다」(2023 → 2024 대만)</li>
+        <li>국제인성교육지도사 · 퍼스널컬러/오라(CPA) 전문가</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <div class="foot">
+    <div class="quote">"생각이 현실이 되는 삶"</div>
+    스스로 설계하고 끝내 실현해 온 사람 — 하지은
+  </div>
+
+</div>
+</body>
+</html>
